@@ -87,13 +87,10 @@ DATABASES = {
 
 ###### 2. Agora adicionamos a app 'accounts' ao nosso 'INSTALLED_APPS'
 <code>
-INSTALLED_APPS = (
-
-	........
-
-    'accounts'
-
-)
+	INSTALLED_APPS = (
+		........
+	    'accounts'
+	)
 </code>
 
 ###### 3. Agora executamos o syncdb para criar um usuário para o painel adm e realizar tarefas de base

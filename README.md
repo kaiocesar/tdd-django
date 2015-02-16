@@ -65,25 +65,26 @@ O intuito deste projeto é mostrar a criação de um projeto real da CRIAÇÃO D
 ## III. Configurações do projeto
 ###### 1. vamos adicionar as configurações de banco de dados, no arquivo `/sistema/settings.py`
 
-`
-DATABASES = {
+<pre>
+	DATABASES = {
 
-    'default': {
+	    'default': {
 
-        'ENGINE': 'django.db.backends.mysql',
+	        'ENGINE': 'django.db.backends.mysql',
 
-        'NAME': 'django_test_db',
+	        'NAME': 'django_test_db',
 
-        'HOST': '127.0.0.1',
+	        'HOST': '127.0.0.1',
 
-        'USER': 'tester',
+	        'USER': 'tester',
 
-        'PASSWORD': '123321',
+	        'PASSWORD': '123321',
 
-    }
+	    }
 
-}
-`
+	}
+</pre>
+
 
 ###### 2. Agora adicionamos a app 'accounts' ao nosso 'INSTALLED_APPS'
 <code>
@@ -92,7 +93,7 @@ DATABASES = {
 		........
 
 	    'accounts'
-	    
+
 	)
 </code>
 

@@ -64,23 +64,36 @@ TDD with Django
 ###### 1. vamos adicionar as configurações de banco de dados, no arquivo `/sistema/settings.py`
 
 `DATABASES = {
+
     'default': {
+
         'ENGINE': 'django.db.backends.mysql',
+
         'NAME': 'django_test_db',
+
         'HOST': '127.0.0.1',
+
         'USER': 'tester',
+
         'PASSWORD': '123321',
+
     }
+
 }`
 
 ###### 2. Agora adicionamos a app 'accounts' ao nosso 'INSTALLED_APPS'
 `INSTALLED_APPS = (
+
 	........
+
     'accounts'
+    
 )`
 
 ###### 3. Agora executamos o syncdb para criar um usuário para o painel adm e realizar tarefas de base
+
 (Atenção que neste passo você cadastrará usuário e senha para o painel administrativo)
+
 `$ python manage.py syncdb`
 
 ###### 4. Por ultimo executamos as migrates

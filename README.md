@@ -65,7 +65,8 @@ O intuito deste projeto é mostrar a criação de um projeto real da CRIAÇÃO D
 ## III. Configurações do projeto
 ###### 1. vamos adicionar as configurações de banco de dados, no arquivo `/sistema/settings.py`
 
-`DATABASES = {
+`
+DATABASES = {
 
     'default': {
 
@@ -81,16 +82,19 @@ O intuito deste projeto é mostrar a criação de um projeto real da CRIAÇÃO D
 
     }
 
-}`
+}
+`
 
 ###### 2. Agora adicionamos a app 'accounts' ao nosso 'INSTALLED_APPS'
-`INSTALLED_APPS = (
+`
+INSTALLED_APPS = (
 
 	........
 
     'accounts'
 
-)`
+)
+`
 
 ###### 3. Agora executamos o syncdb para criar um usuário para o painel adm e realizar tarefas de base
 

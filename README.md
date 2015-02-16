@@ -113,8 +113,73 @@ Através do navegador acessamos `http://127.0.0.1:8001/` e obtemos um "It worked
 também podemos acessar o painel administrativo `http://127.0.0.1:8001/admin` (utilize os dados que você cadastrou quando lançou o comando syncdb)
 
 
+## IV. Criação do modelo de dados
+Sem pressa, vamos ao nosso arquivo `accounts/models.py` e iremos criar seu conteúdo da seguinte maneira:
+<pre>
+	from __future__ import absolute_import
+	from django.db import models
 
 
+	class Accounts(models.Model):
+		id = models.IntegerField(primary_key=True)
+		agencia = models.IntegerField()
+		num_conta = models.IntegerField()
+		tipo_conta = models.CharField(max_length=3)
+		status = models.CharField(max_length=1)
+		created_at = models.DateTimeField()
+
+		class Meta:
+			managed = False
+			db_table = 'accounts'
+			verbose_name = 'Account'
+			verbose_name_plural = 'Accounts'
+
+		"""
+			Função ilustrativa para ajudar a explicar o test unitário
+		"""	
+		def CheckAccount(self, number=None):
+			if (not number):
+				return False
+
+			if (numer == '123'):
+				return True
+
+			return False
+</pre>
+
+
+
+## V. Implementar testes de funcionalidade com a lib TestCase
+Para realizar um teste, o django disponibiliza no seu comando de geração de aplicações, um arquivo tests.py,
+e dentro de cada arquivo deste está o conteúdo abaixo:
+
+<pre>
+	from django.test import TestCase
+
+	# Create your tests here.
+</pre>
+
+Agora iremos acessar o arquivo  tests.py que está dentro de `accounts/`
+
+e iremos iniciar nossos testes básicos, veja abaixo como ficara o nosso teste:
+
+<pre>
+	from django.test import TestCase
+
+	from accounts.models import Accounts
+
+	class AccountsTestCase (TestCase):
+
+		def test_check_account(self):
+			Act = Accounts()
+			self.assertEqual(Act.CheckAccount(), True)
+
+</pre>
+
+E para visualizarmos esse teste unitário, vá até o terminal e digite o sequinte comando:
+`$ python manage.py test`
+
+Esse comando irá primeiro criar uma base de dados de teste, em seguida irá executar todos os testes do projeto, e ao final ela irá excluir a base de dados de testes.
 
 
 

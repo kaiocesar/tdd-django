@@ -88,8 +88,11 @@ DATABASES = {
 ###### 2. Agora adicionamos a app 'accounts' ao nosso 'INSTALLED_APPS'
 <code>
 	INSTALLED_APPS = (
+
 		........
+
 	    'accounts'
+	    
 	)
 </code>
 

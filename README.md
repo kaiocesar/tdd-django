@@ -1,6 +1,8 @@
-# tdd-django
+# Projeto Django com Tdd
 
-TDD with Django
+- Author: Kaio Cesar
+
+O intuito deste projeto é mostrar a criação de um projeto real da CRIAÇÃO DA BASE DE DADOS, TESTE UNITÁRIO até o DEPLOY.
 
 ## I. Base de dados
 ###### 0. Entra no shell do MySQL como root
@@ -87,7 +89,7 @@ TDD with Django
 	........
 
     'accounts'
-    
+
 )`
 
 ###### 3. Agora executamos o syncdb para criar um usuário para o painel adm e realizar tarefas de base
